@@ -16,20 +16,6 @@ export class AuthService {
     public ngZone: NgZone,  // NgZone service to remove outside scope warning
     public router: Router
   ) {
-    /* Saving user data in localstorage when
-  logged in and setting up null when logged out */
-
-    // this.afAuth.authState.subscribe(user => {
-    //    if (user) {
-    //     this.userData = user;
-    //     localStorage.setItem('user', JSON.stringify(this.userData)); 
-    //     JSON.parse(localStorage.getItem('user') || '{}');
-    //   } else {
-    //     // localStorage.setItem('user', "");
-    //     // JSON.parse(localStorage.getItem('user')  || '{}');
-    //     this.SignOut();
-    //   }
-    // })
   }
   // Sign in with Facebook
   FacebookAuth() {
@@ -84,32 +70,14 @@ export class AuthService {
   }
 
   SignOut() {
-    console.log(this.afAuth.authState);
+    console.log(this.afAuth.currentUser);
     this.afAuth.authState.subscribe(aState => {
       aState?.delete()
-      .then(res=>console.log('dleted->'+res))
-      .catch(e=>console.log('error'));
-   });
-   console.log(this.afAuth.authState);
-   this.router.navigate(['login']);
-    // FB.init({
-    //   appId: '616523859731263',
-    //   status: false,
-    //   cookie: true,
-    //   xfbml: true,
-    //   version: 'v8.0'
-    // });
-    // // FB.getLoginStatus(function(response) {
-    // //   FB.logout(function(response){
-    // //     console.log("Logged Out!");
-
-    // //   });
-    // FB.api('/me/permissions', 'delete', {}, () => FB.logout());
-    // return this.afAuth.signOut().then((result) => {
-    //   localStorage.removeItem('user');
-    //   console.log('You are logged out!->'+result);
-    //   this.router.navigate(['login']);
-    // });
+        .then(res => console.log('dleted->' + res))
+        .catch(e => console.log('error'));
+    });
+    console.log(this.afAuth.authState);
+    this.router.navigate(['login']);
   }
 }
 
