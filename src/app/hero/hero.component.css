@@ -1,0 +1,185 @@
+header{
+    height: 100vh;
+    background-color: #90ee90;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left{
+    width: 46vw;
+    height: 96vh;
+    margin: 10px 10px;
+
+    position: relative; 
+}
+.img-hero{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background-image: url('../../images/myfamily.jpeg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute; 
+    top: 0; 
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 30%, rgba(242, 41, 19, 0.4) 54%);
+ 
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+.heading{
+    border-radius: 10px;
+    position: absolute; 
+    top: 20;  
+     
+    height: 10%;
+    width: 95%;
+
+    border-radius: 10px; 
+    background: rgba( 255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 1.5px );
+    -webkit-backdrop-filter: blur( 1.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    font-size: 3.9rem;
+    font-weight: bolder;
+    font-family: 'Caramel', cursive;
+
+    padding: 4px;
+    text-align: center;
+    margin: 50px 15px;
+    color: darkblue;
+
+    letter-spacing: 0.6rem;
+    /* text-transform: uppercase; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right{
+    width: 54vw;
+    height: 96vh;
+
+    border-radius: 10px;
+    margin: 10px 0;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 15.5px );
+    -webkit-backdrop-filter: blur( 15.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );}
+
+.pictiles{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 10px 10px;
+    position: relative;
+}
+.tile{
+    width: 17vw;
+    height: 30vh;
+    border-radius: 7px;
+    background: #90ee90;
+    box-shadow:  7px 7px 14px #79c879,
+                 -7px -7px 14px #a7ffa7;
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;  
+    
+    animation: slide 30s infinite;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .tile h1{
+    display:none;
+    text-align: center;
+    padding: 70px 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px; 
+    background: rgba( 255, 255, 255, 0.55);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 1.5px );
+    -webkit-backdrop-filter: blur( 1.5px );
+    border-radius: 8px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: blue;
+    transition: all 0.3s ease-in;
+  }
+  .tile:hover h1{
+    filter:saturate(var(--value, 5));
+    transition: all 0.3s ease-in;
+    font-weight: bolder;
+    font-family: 'Caramel', cursive;
+    display: block;
+    font-size: 3rem;
+  }
+  @keyframes slide{
+      0%{
+        background-image: url('../../images/pexels-andrea-piacquadio-853151.jpg');
+      }
+      20%{
+        background-image: url('../../images/pexels-andrea-piacquadio-920382.jpg')
+      }
+      40%{
+        background-image: url('../../images/pexels-andrea-piacquadio-920382.jpg')
+      }
+      60%{
+        background-image: url('../../images/pexels-greta-hoffman-7674910.jpg')
+      }
+      80%{
+        background-image: url('../../images/pexels-kaboompics-com-6335.jpg')
+      }
+      100%{
+        background-image: url('../../images/pexels-karina-zhukovskaya-6446709.jpg')
+      }
+  }
+
+  main{
+    height: 100vh;
+  }
+  /* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+button:active {
+  background-color: grey;
+  color: darkblue;
+}
