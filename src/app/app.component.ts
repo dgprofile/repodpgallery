@@ -12,6 +12,7 @@ export class AppComponent implements OnInit{
   }
   ngOnInit(): void {
     console.log("Facebook login");
-    this.authService.FacebookAuth(); 
+    //enable below line when deployed to prod
+    //this.authService.FacebookAuth(); 
   }
 }

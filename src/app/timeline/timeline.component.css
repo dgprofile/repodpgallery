@@ -1,0 +1,66 @@
+.timeline-hero{
+    height: 100vh;
+    width: 100vw;
+    background-color: #7FFFD4;
+
+    display:flex;
+    flex-direction: row;
+}
+.left{
+    height: 100vh;
+    width: 45vw; 
+    position: relative;
+}
+
+.plane{
+    position: absolute;
+    top: 0;
+    left: 10;
+}
+.plane svg{
+    width: 100px;
+    margin-top: 10px;
+    transform: rotate(45deg); 
+}
+#path {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    stroke: purple;
+    left: 50%;
+  }
+.rocket{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 900px;
+}
+.tree{
+    position: absolute;
+    top: 50px; 
+   
+}
+.tree svg{ 
+    width: 300px;
+    height: 800px;
+}
+.right{
+    height: 100vh;
+    width: 55vw;
+    background-image: url('../images/20170527_095436.jpg');
+    border-top-left-radius: 50% 58%; 
+    border-bottom-left-radius: 50% 38%; 
+    box-shadow: 0 10px 8px 10px #045f41;
+}
+.img-panel{
+     background-position: right right;
+     background-origin: padding-box;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-blend-mode: overlay;
+     object-fit: contain;
+}
+
+
+
+ 

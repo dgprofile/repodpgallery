@@ -10,7 +10,8 @@ import { AngularFireDatabaseModule } from "@angular/fire/compat/database";
 import { environment } from 'src/environments/environment';
 import { LoginComponent } from './login/login.component';
 import { RouterModule, Routes } from '@angular/router';
-import { Route } from '@angular/compiler/src/core'; 
+import { Route } from '@angular/compiler/src/core';
+import { TimelineComponent } from './timeline/timeline.component'; 
 
 const routes: Routes = [
   {path: 'gallery', component: HeroComponent},
@@ -20,7 +21,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HeroComponent,
-    LoginComponent 
+    LoginComponent,
+    TimelineComponent 
   ],
   imports: [
     BrowserModule, 
