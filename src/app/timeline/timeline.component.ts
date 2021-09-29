@@ -15,7 +15,7 @@ export class TimelineComponent implements OnInit {
   ngOnInit(): void {
     
     gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
-    let tl = gsap.timeline({
+    let tlPlane = gsap.timeline({
       scrollTrigger:{
         trigger: ".timeline-hero",
         pin: ".timeline-hero",
@@ -24,15 +24,17 @@ export class TimelineComponent implements OnInit {
         start: "top top",
         end: "bottom top"
       },
-      defaults:{ease: "none"}
-    });
-    tl.to(("#Capa_1"),{
+      defaults:{ease: "none",opacity:1}
+    })
+    .add("end");
+    tlPlane
+    .to(("#Capa_1"),{
       duration: 5,
       rotate: (130),
       motionPath:{
         //path: ".theline",
         //align: ".theLine",
-        alignOrigin: [0.5, 0.5],
+        alignOrigin: [0.5, 0.5], 
         path: [
           {x:100, y:20},
           {x:200, y:25},
@@ -50,10 +52,52 @@ export class TimelineComponent implements OnInit {
           {x:700, y:465},
           {x:720, y:555},
           {x:740, y:640},
-        
         ]
       }
-    });
+    }, "end")
+    .to(".place1",{
+      delay:0.25,
+      opacity:1
+    }, "end")
+    .to(".place2",{
+      delay:0.5,
+      opacity:1
+    }, "end")
+    .to(".place3",{
+      delay:0.75,
+      opacity:1
+    }, "end")
+    .to(".place4",{
+      delay:1,
+      opacity:1
+    }, "end")
+    .to(".place5",{
+      delay:1.25,
+      opacity:1
+    }, "end")
+    .to(".place6",{
+      delay:1.5,
+      opacity:1
+    }, "end")
+    .to(".place7",{
+      delay:1.75,
+      opacity:1
+    }, "end")
+    .to(".place8",{
+      delay:2.0,
+      opacity:1
+    }, "end")
+    .to(".place9",{
+      delay:2.25,
+      opacity:1
+    }, "end")
+    .to(".place10",{
+      delay:2.5,
+      opacity:1
+    }, "end")
+    .to(".place11",{
+      delay:2.75,
+      opacity:1
+    }, "end");
   }
-
 }
